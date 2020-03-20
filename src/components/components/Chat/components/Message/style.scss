@@ -1,0 +1,21 @@
+.single-message--wrapper {
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 15px;
+  word-wrap: break-word;
+
+  .single-message--header {
+    font-size: 13px;
+    color: #86898e;
+  }
+
+  .single-message--text {
+    font-size: 18px;
+    line-height: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: #ffffffff;
+  }
+}

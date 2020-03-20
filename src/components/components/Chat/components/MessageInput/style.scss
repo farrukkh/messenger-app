@@ -1,0 +1,28 @@
+.message-input--wrapper {
+  width: 100%;
+  padding: 0px 16px;
+
+  .message-input--content {
+    margin-bottom: 24px;
+    background-color: lightgray;
+    border-radius: 8px;
+
+    .new-message--input {
+      height: 44px;
+      width: 100%;
+      padding: 0px 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      color: #757575;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .input--disabled {
+      cursor: not-allowed;
+    }
+  }
+}

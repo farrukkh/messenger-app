@@ -1,0 +1,9 @@
+.messages--wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  contain: size;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-bottom: 20px;
+}
