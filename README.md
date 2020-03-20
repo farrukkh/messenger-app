@@ -1,69 +1,34 @@
+# Messaging app
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Steps to run
 
-In the project directory, you can run:
+Install all packages by running: `yarn install`
 
-### `yarn start`
+To start the project, run: `yarn start`
 
-Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Explanation of features
 
-### `yarn test`
+### 1. Add new recepients
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- By adding text in the sidebar input field and pressing Enter, user is able to add multiple friends.
+- User is not able to add empty friends (i.e. just clicking enter without adding any text in the input field).
+- Friends are not persisted, so on refresh they will disappear.
 
-### `yarn build`
+### 2. Set active recepient
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- When the user has added friend(s), he needs to click on a friend to make it the currently active one, which will be shown by style changes of said friend element.
+- The user can switch between multiple friend, but the message can only be sent to one (currently active) friend.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### 3. Send message to active recepient
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- When a user has selected a friend, he is able to add text to message input field and send it by pressing Enter. If not friend is selected, the message input will be disabled.
+- Every message is stored in the state, so the user can switch through friends and see all the messages written to them.
+- If the user sends enough messages to get to the bottom of the chat window, on every new message the window will scroll to the most recent one, i.e. the one on bottom.
+- Messages are not persisted, so on refresh they will disappear.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# messenger-app
+#### NOTE: Styling is not optimized for mobile.
